@@ -6,7 +6,7 @@ module.exports = function healthcheck(url, schedule) {
 		schedule = 30;
 	}
 	var time = schedule * 60 * 1000;
-	debug('Set up healthchecks.io on ' + url + ' every ' + time + ' minutes.'; 
+	debug('Set up healthchecks.io on ' + url + ' every ' + time + ' minutes.'); 
 	https.get(url);
 	return setInterval(function check() {
 		https.get(url);

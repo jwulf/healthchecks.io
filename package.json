@@ -1,6 +1,6 @@
 {
   "name": "healthchecks.io",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Ping a healthchecks.io endpoint on a schedule",
   "main": "index.js",
   "scripts": {
