@@ -6,6 +6,19 @@ Healthchecks.io is a free service that allows you to monitor the availability of
 
 This JavaScript modules allows you to ping a healthchecks.io endpoint on a schedule.
 
+## To use
+
+Install the package using `npm` or `yarn`:
+
+```
+# if you use npm
+npm i -S healthchecks.io 
+```
+```
+# if you use yarn
+yarn add healthchecks.io 
+```
+
 Example usage:
 
 ```
