@@ -12,10 +12,12 @@ Install the package using `npm` or `yarn`:
 
 ```
 # if you use npm
+
 npm i -S healthchecks.io 
 ```
 ```
 # if you use yarn
+
 yarn add healthchecks.io 
 ```
 
