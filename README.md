@@ -1,6 +1,8 @@
 # healthchecks.io
 
-The legendary [healthchecks.io](https://healthchecks.io) npm module. Literally the simplest way to monitor the availability of your JavaScript application - for free!
+The legendary [healthchecks.io](https://healthchecks.io) npm module. 
+
+**Literally the simplest way to monitor the availability of your JavaScript application - _for free!_**
 
 Healthchecks.io is a free service that allows you to monitor the availability of your application. Receive notifications when your app goes down via email, Slack, Telegram message, or a number of other integrations.
 
