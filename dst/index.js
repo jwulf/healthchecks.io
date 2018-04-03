@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var _debug = require("debug");
 var https = require("https");
 var debug = _debug('healthcheck');
@@ -17,7 +16,8 @@ function healthcheck(url, schedule) {
         schedule = 30;
     }
     debug("Set up healthchecks.io on " + url + " every " + schedule + " minutes.");
-    check(url)();
-    return setInterval(check(url), schedule * 60 * 1000);
+    var heartbeat = check(url);
+    heartbeat();
+    return setInterval(heartbeat, schedule * 60 * 1000);
 }
-exports.healthcheck = healthcheck;
+module.exports = healthcheck;
