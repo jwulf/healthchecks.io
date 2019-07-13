@@ -1,6 +1,6 @@
 {
   "name": "healthchecks.io",
-  "version": "1.1.4",
+  "version": "1.2.0",
   "description": "Ping a healthchecks.io endpoint on a schedule",
   "main": "dst/index.js",
   "types": "dst/index.d.ts",
