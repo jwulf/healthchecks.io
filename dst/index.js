@@ -1,15 +1,19 @@
 "use strict";
 var _debug = require("debug");
+var http = require("http");
 var https = require("https");
-var debug = _debug('healthcheck');
+var debug = _debug("healthcheck");
 function healthcheck(url, schedule) {
     if (schedule === void 0) { schedule = 30; }
-    var check = function (url) { return function () { try {
-        https.get(url);
-    }
-    catch (e) { } }; };
+    var httpLib = url.indexOf("https://") === 0 ? https : http;
+    var check = function (url) { return function () {
+        try {
+            httpLib.get(url);
+        }
+        catch (e) { }
+    }; };
     if (!url) {
-        console.log('No URL provided for healthcheck.io');
+        console.log("No URL provided for healthcheck.io");
         return null;
     }
     if (!schedule || isNaN(parseInt(schedule.toString()))) {
