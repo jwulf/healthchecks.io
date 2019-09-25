@@ -26,7 +26,8 @@ yarn add healthchecks.io
 Example usage:
 
 ```
-const healthcheck = require('healthchecks.io');
+import { healthcheck } from 'healthchecks.io'; // TypeScript
+const healthcheck = require('healthcheck').healthcheck: // JavaScript
 
 const url = 'https://hchk.io/f55d2579-8dc2-4149-83f4-263cabe334c0';
 

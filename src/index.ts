@@ -4,7 +4,11 @@ import * as https from "https";
 
 const debug = _debug("healthcheck");
 
-function healthcheck(url: string, schedule = 30) {
+export function healthcheck(url: string, minutes = 30) {
+  if (!url) {
+    console.log("No URL provided for healthcheck.io");
+    return null;
+  }
   const httpLib = url.indexOf("https://") === 0 ? https : http;
   const check = url => () => {
     try {
@@ -12,17 +16,11 @@ function healthcheck(url: string, schedule = 30) {
     } catch (e) {}
   };
 
-  if (!url) {
-    console.log("No URL provided for healthcheck.io");
-    return null;
+  if (!minutes || isNaN(parseInt(minutes.toString()))) {
+    minutes = 30;
   }
-  if (!schedule || isNaN(parseInt(schedule.toString()))) {
-    schedule = 30;
-  }
-  debug(`Set up healthchecks.io on ${url} every ${schedule} minutes.`);
+  debug(`Set up healthchecks.io on ${url} every ${minutes} minutes.`);
   const heartbeat = check(url);
   heartbeat();
-  return setInterval(heartbeat, schedule * 60 * 1000);
+  return setInterval(heartbeat, minutes * 60 * 1000);
 }
-
-export = healthcheck;
