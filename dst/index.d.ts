@@ -1,3 +1,2 @@
 /// <reference types="node" />
-declare function healthcheck(url: string, schedule?: number): NodeJS.Timer | null;
-export = healthcheck;
+export declare function healthcheck(url: string, minutes?: number): NodeJS.Timer | null;
