@@ -1,12 +1,13 @@
 {
   "name": "healthchecks.io",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Ping a healthchecks.io endpoint on a schedule",
   "main": "dst/index.js",
   "types": "dst/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "precommit": "tsc"
+    "precommit": "tsc",
+    "prepare": "tsc"
   },
   "repository": {
     "type": "git",

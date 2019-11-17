@@ -1,2 +1,2 @@
-/// <reference types="node" />
-export declare function healthcheck(url: string, minutes?: number): NodeJS.Timer | null;
+import { Healthcheck } from "./Healthcheck";
+export declare function healthcheck(url: string, minutes?: number): Healthcheck | null;

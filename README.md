@@ -33,7 +33,9 @@ const url = 'https://hchk.io/f55d2579-8dc2-4149-83f4-263cabe334c0';
 
 // Ping healthcheck endpoint every 15 minutes
 
-healthcheck(url, 15);
+const check = healthcheck(url, 15);
+
+check.stop(); // can restart with check.start()
 ```
 
 
