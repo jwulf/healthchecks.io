@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.healthcheck = void 0;
 var _debug = require("debug");
 var Healthcheck_1 = require("./Healthcheck");
 var debug = _debug("healthcheck");

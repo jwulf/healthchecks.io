@@ -1,5 +1,6 @@
 /// <reference types="node" />
-export declare class Healthcheck {
+import { EventEmitter } from "events";
+export declare class Healthcheck extends EventEmitter {
     timer?: NodeJS.Timer;
     url: string;
     minutes: number;

@@ -35,6 +35,8 @@ const url = 'https://hchk.io/f55d2579-8dc2-4149-83f4-263cabe334c0';
 
 const check = healthcheck(url, 15);
 
+check.on('error', err => console.log('Error pinging healthcheck', err));
+
 check.stop(); // can restart with check.start()
 ```
 

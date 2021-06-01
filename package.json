@@ -1,6 +1,6 @@
 {
   "name": "healthchecks.io",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Ping a healthchecks.io endpoint on a schedule",
   "main": "dst/index.js",
   "types": "dst/index.d.ts",
@@ -23,11 +23,11 @@
   },
   "homepage": "https://github.com/jwulf/healthchecks.io#readme",
   "dependencies": {
-    "debug": "^2.6.6"
+    "debug": "^2.6.6",
+    "@types/node": "^8.10.59"
   },
   "devDependencies": {
     "@types/debug": "^0.0.30",
-    "@types/node": "^8.0.46",
     "husky": "^0.14.3"
   }
 }
